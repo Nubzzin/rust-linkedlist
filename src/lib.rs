@@ -34,6 +34,10 @@ impl LL {
         self.len += 1;
     }
 
+    pub fn tail(&self) -> i32 {
+        self.tail.value
+    }
+
     pub fn index(&self, index: u32) -> i32 {
         match index {
             0 => self.head.value.clone(),
