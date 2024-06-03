@@ -28,11 +28,11 @@ pub mod ll {
         }
 
         pub fn push_front(&mut self, value: i32) {
-            let node = Box::new(Node {
+            let node = Node {
                 value,
                 next: Some(Box::new(*self.head.clone())),
-            });
-            self.head = node;
+            };
+            self.head = Box::new(node);
             self.len += 1;
         }
 
