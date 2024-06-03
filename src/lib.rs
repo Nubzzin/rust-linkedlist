@@ -2,7 +2,7 @@ pub mod ll {
     pub struct LinkedL {
         head: Box<Node>,
         tail: Box<Node>,
-        len: u32,
+        pub len: u32,
     }
 
     #[derive(Clone)]
