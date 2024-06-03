@@ -41,7 +41,10 @@ pub mod ll {
                 x if self.len - 1 >= x => {
                     let mut next_node = self.head.clone();
                     for _ in 0..x {
-                        next_node = next_node.next.unwrap();
+                        next_node = match next_node.next {
+                            Some(x) => x,
+                            None => break,
+                        }
                     }
                     next_node.value
                 }
