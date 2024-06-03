@@ -1,4 +1,4 @@
-mod ll {
+pub mod ll {
     pub struct LinkedL {
         head: Box<Node>,
         tail: Option<Box<Node>>,
